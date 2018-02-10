@@ -1,0 +1,143 @@
+.app div {
+	height:130px;
+	min-width:40px;
+	position: relative;
+	float: left;
+	margin-left:20px;
+}
+
+.do {
+	background: url('../imagem/notas/do.png') no-repeat;
+}
+
+.doSustenido {
+	background: url('../imagem/notas/doSustenido.png') no-repeat;
+}
+
+.reBemol {
+	background: url('../imagem/notas/doSustenido.png') no-repeat;
+}
+
+.re {
+	background: url('../imagem/notas/re.png') no-repeat;
+}
+
+.reSustenido {
+	background: url('../imagem/notas/reSustenido.png') no-repeat;
+}
+
+.miBemol {
+	background: url('../imagem/notas/reSustenido.png') no-repeat;
+}
+
+.mi {
+	background: url('../imagem/notas/mi.png') no-repeat;
+}
+
+.fa {
+	background: url('../imagem/notas/fa.png') no-repeat;
+}
+
+.faSustenido {
+	background: url('../imagem/notas/faSustenido.png') no-repeat;
+}
+
+.solBemol {
+	background: url('../imagem/notas/faSustenido.png') no-repeat;
+}
+
+.sol {
+	background: url('../imagem/notas/sol.png') no-repeat;
+}
+
+.solSustenido {
+	background: url('../imagem/notas/solSustenido.png') no-repeat;
+}
+
+.laBemol {
+	background: url('../imagem/notas/solSustenido.png') no-repeat;
+}
+
+.la {
+	background: url('../imagem/notas/la.png') no-repeat;
+}
+
+.laSustenido {
+	background: url('../imagem/notas/laSustenido.png') no-repeat;
+}
+
+.siBemol {
+	background: url('../imagem/notas/laSustenido.png') no-repeat;
+}
+
+.si {
+	background: url('../imagem/notas/si.png') no-repeat;
+}
+
+.DO {
+	background: url('../imagem/notas/DO_1.png') no-repeat;
+}
+
+.DOSustenido {
+	background: url('../imagem/notas/DOSustenido_1.png') no-repeat;
+}
+
+.REBemol {
+	background: url('../imagem/notas/DOSustenido_1.png') no-repeat;
+}
+
+.RE {
+	background: url('../imagem/notas/RE_1.png') no-repeat;
+}
+
+.RESustenido {
+	background: url('../imagem/notas/RESustenido_1.png') no-repeat;
+}
+
+.MIBemol {
+	background: url('../imagem/notas/RESustenido_1.png') no-repeat;
+}
+
+.MI {
+	background: url('../imagem/notas/MI_1.png') no-repeat;
+}
+
+.FA {
+	background: url('../imagem/notas/FA_1.png') no-repeat;
+}
+
+.FASustenido {
+	background: url('../imagem/notas/FASustenido_1.png') no-repeat;
+}
+
+.SOLBemol {
+	background: url('../imagem/notas/FASustenido_1.png') no-repeat;
+}
+
+.SOL {
+	background: url('../imagem/notas/SOL_1.png') no-repeat;
+}
+
+.SOLSustenido {
+	background: url('../imagem/notas/SOLSustenido_1.png') no-repeat;
+}
+
+.LABemol {
+	background: url('../imagem/notas/SOLSustenido_1.png') no-repeat;
+}
+
+.LA {
+	background: url('../imagem/notas/LA_1.png') no-repeat;
+}
+
+.LASustenido {
+	background: url('../imagem/notas/LASustenido_1.png') no-repeat;
+}
+
+.SIBemol {
+	background: url('../imagem/notas/LASustenido_1.png') no-repeat;
+}
+
+.SI {
+	background: url('../imagem/notas/SI_1.png') no-repeat;
+}

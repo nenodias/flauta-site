@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flauta</title>
+	<link rel="stylesheet" href="css/notas.css" />
+	<script type="text/javascript" src="js/notas.js"></script>
+</head>
+<body>
+	<form id="form">
+		<label>URL:
+			<input type="text" name="url" />
+		</label>
+		<button type="button" onclick="enviar()">
+			Carregar
+		</button>
+	</form>
+	<div class="app">
+	</div>
+	<script type="text/javascript">
+		function enviar(){
+			let url = document.querySelector('#form').url.value;
+			if(url){
+				let pages = window.location.href.split('#');
+				window.location.href = pages[0] + "#"+ url;
+				window.location.reload();
+			}
+		}
+		(function(){
+			let pages = window.location.href.split('#');
+			if(pages.length > 1){
+				let url = pages[1];
+				if(url){
+					notas(url);
+				}
+			}
+		})();
+		//notas('peaceful-days.txt');
+	</script>
+</body>
+</html>
