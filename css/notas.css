@@ -1,9 +1,41 @@
+html, body {
+	height: 100%;
+}
+
+.dark {
+	background-color: #171717;
+	color: #EDEDED;
+}
+
+.container {
+	margin: 30px auto;
+	text-align: center;
+
+}
+
+form {
+	max-width: 340px;
+	margin: 0 auto;
+}
+
+.btn {
+	margin: 0.5rem 0;
+}
+
 .app div {
-	height:130px;
-	min-width:40px;
-	position: relative;
-	float: left;
-	margin-left:20px;
+	height: 130px;
+	min-width: 40px;
+	/* position: relative;
+	float: left; */
+	margin: 20px;
+}
+
+.app {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 999px;
+	margin: 0 auto;
+	justify-content: center;
 }
 
 .do {

@@ -1,23 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Flauta</title>
-  <link rel="stylesheet" href="css/notas.css"/>
-  <script type="text/javascript" src="js/notas.js" defer></script>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flauta</title>
+	<link rel="stylesheet" href="css/notas.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+	<script type="text/javascript" src="js/notas.js" defer></script>
   <script type="text/javascript" src="js/main.js" defer></script>
 </head>
 <body>
-<div>
-  <form id="form">
-    <label>URL:
-      <input type="text" name="url"/>
-    </label>
-    <button type="button" onclick="enviar()">
-      Carregar
-    </button>
-  </form>
-  <div class="app"></div>
-</div>
+	<header class="container">
+			<h1>Conversor de cifras</h1>
+			<button type="button" class="btn btn-outline-dark" data-js="darkModeButton" onclick="setDarkMode()">Habilitar modo escuro</button>
+			<h3>Instruções</h3>
+			<p>No campo "URL", cole o endereço de um arquivo <code>raw</code> (<code>.txt</code>) como <a href="https://gist.githubusercontent.com/nenodias/4a0bb96299217cbe86cb173e5928008e/raw/e1c96abc8338998ac2f300684d26fa7d1a2dedf5/Peaceful%2520Days.txt">este aqui</a> e veja as cifras traduzidas.</p>
+	</header>
+
+	<form id="form">
+		<label class="form-label" for="form-input">URL:</label>
+		<input type="text" name="url" class="form-control" id="form-input"/>
+		<button type="button" class="btn btn-primary" onclick="enviar()">
+			Carregar
+		</button>
+	</form>
+	<div class="app">
+	</div>
+	<script type="text/javascript">
+
+	window.onload = () => {
+
+		if (localStorage.getItem("DARK_MODE")) {
+			const body = document.querySelector("body");
+			const darkModeButton = document.querySelector("[data-js='darkModeButton']");
+			body.classList.toggle("dark");
+			darkModeButton.textContent = "Desabilitar modo escuro";
+			darkModeButton.classList.remove("btn-outline-dark");
+			darkModeButton.classList.add("btn-outline-light");
+		}
+	}
+
+		function setDarkMode() {
+			localStorage.setItem("DARK_MODE", true);
+			const body = document.querySelector("body");
+			body.classList.toggle("dark");
+			const darkModeButton = document.querySelector("[data-js='darkModeButton']");
+
+			if (body.classList.contains("dark")) {
+				darkModeButton.textContent = "Desabilitar modo escuro";
+				darkModeButton.classList.remove("btn-outline-dark");
+				darkModeButton.classList.add("btn-outline-light");
+			} else {
+				darkModeButton.textContent = "Habilitar modo escuro";
+				darkModeButton.classList.add("btn-outline-dark");
+				darkModeButton.classList.remove("btn-outline-light");
+				localStorage.removeItem("DARK_MODE");
+			}
+		}
+	</script>
 </body>
 </html>
