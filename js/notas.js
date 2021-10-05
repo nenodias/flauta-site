@@ -53,7 +53,13 @@ function adicionarElemento(nota){
 	let div = document.createElement('DIV');
 	console.log("'" + nota + "' => " + NOTAS[nota]);
 	div.setAttribute('class', NOTAS[nota]);
+	div.setAttribute('data-bs-toggle', 'tooltip');
+	div.setAttribute('title', NOTAS[nota]);
 	document.querySelector('.app').appendChild(div);
+	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+	var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		return new bootstrap.Tooltip(tooltipTriggerEl)
+	})
 }
 
 function adicionarBR(){
