@@ -7,7 +7,8 @@
 	<title>Flauta</title>
 	<link rel="stylesheet" href="css/notas.css" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-	<script type="text/javascript" src="js/notas.js"></script>
+	<script type="text/javascript" src="js/notas.js" defer></script>
+  <script type="text/javascript" src="js/main.js" defer></script>
 </head>
 <body>
 	<header class="container">
@@ -57,27 +58,6 @@
 				localStorage.removeItem("DARK_MODE");
 			}
 		}
-
-		function enviar(){
-			let url = document.querySelector('#form').url.value;
-			if(url){
-				let pages = window.location.href.split('#');
-				window.location.href = pages[0] + "#"+ url;
-				window.location.reload();
-			}
-		}
-		(function(){
-			let pages = window.location.href.split('#');
-			if(pages.length > 1){
-				let url = pages[1];
-				if(url){
-					notas(url);
-				}
-			}
-		})();
-		//notas('peaceful-days.txt');
 	</script>
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
 </body>
 </html>
